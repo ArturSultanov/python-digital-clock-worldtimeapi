@@ -7,7 +7,7 @@ def update_time():
     """Getting proper time depend on current IP"""
     time_ms_accuracy = 1
     time_ms_coefficient = time_ms_accuracy - 6
-    time_ms_update = 10 ^ time_ms_accuracy
+    time_ms_update = int(1000 / (10 ^ (time_ms_accuracy-1)))
 
 
     try:
